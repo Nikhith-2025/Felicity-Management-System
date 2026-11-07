@@ -43,10 +43,12 @@ validates the registration, rejects duplicates and updates the attendance count.
 reviews it. On approval the ticket is issued and emailed, stock goes down and revenue
 is updated.
 
-```
-upload proof --> organizer reviews --+--> approve --> ticket emailed, stock and revenue updated
-                                     |
-                                     +--> reject
+```mermaid
+flowchart LR
+    A[Upload proof] --> B{Organizer review}
+    B -->|Approve| C[Ticket emailed]
+    C --> D[Stock and revenue updated]
+    B -->|Reject| E[Registration not confirmed]
 ```
 
 **Forum.** Each event has its own Socket.IO room. Messages are saved in MongoDB and then
