@@ -48,7 +48,7 @@ flowchart LR
     A[Upload proof] --> B{Organizer review}
     B -->|Approve| C[Ticket emailed]
     C --> D[Stock and revenue updated]
-    B -->|Reject| E[Registration not confirmed]
+    B -->|Reject| E[Payment rejected]
 ```
 
 **Forum.** Each event has its own Socket.IO room. Messages are saved in MongoDB and then
